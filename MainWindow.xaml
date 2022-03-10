@@ -1,0 +1,27 @@
+﻿<Window x:Class="Day2_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Day2_2" xmlns:dv="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <ListView x:Name="DataListView"></ListView>
+        </StackPanel>
+        <WindowsFormsHost Margin="30">
+            <dv:Chart x:Name="MyChart">
+                <dv:Chart.Series>
+                </dv:Chart.Series>
+                <dv:Chart.Legends>
+                    <dv:Legend Name="FirstLegend" Title="Статистика по Москве" />
+                </dv:Chart.Legends>
+                <dv:Chart.ChartAreas>
+                    <dv:ChartArea Name="FirstArea"/>
+                </dv:Chart.ChartAreas>
+
+            </dv:Chart>
+        </WindowsFormsHost>
+    </Grid>
+</Window>
